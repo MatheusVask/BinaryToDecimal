@@ -52,6 +52,7 @@ p#result{
 @media (max-width: 768px){
   #binaryValue{
     width: 15rem;
+    margin: auto 40px;
   }
   h1{
     font-size: 40px;
