@@ -7,11 +7,15 @@ function convertToDecimal(binaryValue){
   return result
 }
 
-function truee(){
+function notBinary(){
   results.innerHTML = 'Not a Binary!';
   results.style.fontSize = "40px";
-  results.style.color = "#d32c45"
-  return -1
+  results.style.color = "#d32c45";
+}
+function isBinary(){
+  results.innerHTML = `${convertToDecimal(Number(binary.value))}`;
+  results.style.fontSize = "80px";
+  results.style.color = "#fffba8"
 }
 
 setInterval(()=>{
@@ -22,11 +26,9 @@ setInterval(()=>{
   const valores = binary.value.split('')
   valores.map(char => {
     if(char !== "0" && char !== "1"){
-      return truee()
+      notBinary()
     }else{
-      results.innerHTML = `${convertToDecimal(Number(binary.value))}`;
-      results.style.fontSize = "80px";
-      results.style.color = "#fffba8"
+      isBinary()
     }
   })
 }, 100)
